@@ -22,7 +22,7 @@
             <hr>
 
                 <button onclick="Login()">Sign In</button>
-            </div>
+        </div>
 
         <script>
             function Login(){
@@ -34,7 +34,14 @@
                     error.innerHTML = "Username atau Password tidak boleh kosong";
                     return;
                 }
-
+                if(password.length < 8){
+                    error.innerHTML = "Password tidak boleh kurang dari 8 Karakter";
+                    return;
+                }
+                if(password.length > 16){
+                    error.innerHTML = "Password tidak boleh lebih dari 16 Karakter";
+                    return;
+                }   
                 window.location.href = "https://www.instagram.com/pratistha_nat?igsh=MXVkeW1oNjRhZWxjbQ==";
             }
         </script>
